@@ -1,0 +1,10 @@
+public class Afte10days
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the Date (dd-mm-yyy)");
+        DateTime date = Convert.ToDateTime(Console.ReadLine());
+        DateTime resultDate = date.AddDays(10);
+        Console.WriteLine("After 10 Days : "+ resultDate.ToString("dd-MM-yyyy"));
+    }
+}

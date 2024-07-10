@@ -1,0 +1,13 @@
+public class CalculateDateBetee2dates
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the 1st date :");
+        DateTime date1 = DateTime.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the 2nd date :");
+        DateTime date2 = DateTime.Parse(Console.ReadLine());
+
+
+        Console.WriteLine((date2 - date1).TotalDays);
+    }
+}

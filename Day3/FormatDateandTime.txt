@@ -1,0 +1,8 @@
+public class FormatDateTime
+{
+    public static void Main(string[] args)
+    {
+        DateTime date =  DateTime.Now;
+        Console.WriteLine(date.ToString("dddd,dd MMM,yyyy, hh:mm tt"));
+    }
+}
