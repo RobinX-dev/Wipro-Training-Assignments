@@ -1,0 +1,46 @@
+public class ProductDetails {
+    public static void Main(String[] args) {
+        Console.Write("Enter the product Id :");
+        int productId = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter the product name :");
+        string productName = Console.ReadLine();
+
+        Console.Write("Enter the product price :");
+        int productPrice = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter the product quantity :");
+        int productQuantity = Convert.ToInt32(Console.ReadLine());
+
+
+        int totalAmount = productQuantity * productPrice;
+        double discount = 0;
+
+        if (totalAmount > 1000) {
+            discount = 0.1;
+        }
+        else if (totalAmount > 3000) {
+            discount = 0.15;
+        }
+        else if (totalAmount > 5000) {
+            discount = 0.2;
+        }
+
+        Console.WriteLine("---------------------------------------------------");
+        Console.WriteLine("Product Details");
+        Console.WriteLine("````````````````");
+        Console.WriteLine("Product Id : " + productId);
+        Console.WriteLine("Product Name : " + productName);
+        Console.WriteLine("Product Price : " + productPrice);
+        Console.WriteLine("Prosuct Quantity " + productQuantity);
+        Console.WriteLine();
+        Console.WriteLine("----------------------------------------------------");
+        Console.WriteLine("Total Amount : " + totalAmount);
+
+        discount = (double)totalAmount * discount;
+        Console.WriteLine("Discount : " + discount);
+
+        Console.WriteLine("Amount to pay : " + (totalAmount - discount));
+
+    }
+}

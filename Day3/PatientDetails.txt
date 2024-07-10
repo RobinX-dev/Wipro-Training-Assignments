@@ -1,0 +1,30 @@
+public class PatientDetails {
+    public static void Main(string[] args) {
+        Console.WriteLine("Enter the patient Details :");
+        Console.Write("Enter Patient Name :");
+        string patientName = Console.ReadLine();
+
+        Console.Write("Enter patient's Gender M (male) or F (female):");
+        char patientGender = char.Parse(Console.ReadLine());
+
+        Console.Write("Enter Patient Age :");
+        int patientAge = int.Parse(Console.ReadLine());
+
+        Console.Write("Enter Patient Blood Group :");
+        string patientBloodGrp = Console.ReadLine();
+
+        
+        
+        Console.Write("Patient DOB (dd-mm-yyyy) : ");
+        DateTime dob = DateTime.Parse(Console.ReadLine());
+
+        Console.Write("Patient Phone Number :");
+        long phonenumber = long.Parse(Console.ReadLine());
+
+        Console.Write("Real Patient? true/false :");
+        bool isPatient = bool.Parse(Console.ReadLine());
+
+        Console.WriteLine("Entry Time : "+ DateTime.Now);
+
+    }
+}
