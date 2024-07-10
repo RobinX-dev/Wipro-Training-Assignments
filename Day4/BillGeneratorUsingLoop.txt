@@ -1,0 +1,15 @@
+public class BillGeneratorUsingLoop {
+    public static void Main(string[] args) {
+        int total = 0;
+        for (int i = 0; i < 5; i++) {
+            Console.Write("Enter the Product {0} Price :",i+1);
+            int productPrice = int.Parse(Console.ReadLine());
+            Console.Write("Enter the quantity :");
+            int productQuantity = int.Parse(Console.ReadLine());
+
+            total += (productPrice * productQuantity);
+        }
+        Console.WriteLine();
+        Console.WriteLine("Total amount to pay : {0}",total);
+    }
+}

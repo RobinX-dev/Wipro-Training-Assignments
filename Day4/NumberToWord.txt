@@ -1,0 +1,42 @@
+public class ConvetIntTOWord {
+    public static void Main(string[] args) {
+        Console.Write("Enter the number :");
+        int number = Convert.ToInt32(Console.ReadLine());
+        string outputString = "";
+        while (number > 0) {
+            int singleDigit = number % 10;
+            if (singleDigit == 0) {
+                outputString = "Zero" + " " + outputString;
+            }
+            else if (singleDigit == 1) {
+                outputString = "One" + " " + outputString;
+            }
+            else if (singleDigit == 2) {
+                outputString = "Two" + " " + outputString;
+            }
+            else if (singleDigit == 3) {
+                outputString = "Three" + " " + outputString;
+            }
+            else if (singleDigit == 4) {
+                outputString = "Four" + " " + outputString;
+            }
+            else if (singleDigit == 5) {
+                outputString = "Five" + " " + outputString;
+            }
+            else if (singleDigit == 6) {
+                outputString = "Six" + " " + outputString;
+            }
+            else if (singleDigit == 7) {
+                outputString = "Seven" + " " + outputString;
+            }
+            else if (singleDigit == 8) {
+                outputString = "Eight" + " " + outputString;
+            }
+            else if (singleDigit == 9) {
+                outputString = "Nine" + " " + outputString;
+            }
+            number /= 10;
+        }
+        Console.WriteLine(outputString);
+    }
+}
