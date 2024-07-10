@@ -1,0 +1,35 @@
+public class ArmstrongNumber
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter A number :");
+        int Number = Convert.ToInt32(Console.ReadLine());
+        int duplicate = Number;
+        int length = 0, result = 0;
+        while(duplicate > 0)
+        {
+            duplicate /= 10;
+            length++;
+        }
+        duplicate = Number;
+        while(duplicate > 0)
+        {
+            int remainder = duplicate % 10;
+            int ExponentValue = 1;
+            for(int i = 0; i < length; i++)
+            {
+                ExponentValue = ExponentValue * remainder;
+            }
+            result += ExponentValue;
+            duplicate /= 10;
+        }
+        if(result == Number)
+        {
+            Console.WriteLine("Armstrong Number");
+        }
+        else
+        {
+            Console.WriteLine("Non Armstrong number");
+        }
+    }
+}

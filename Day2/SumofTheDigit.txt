@@ -1,0 +1,17 @@
+public class SumofDigit
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a Three digit number :");
+        int Number = Convert.ToInt32(Console.ReadLine());
+        int Duplicate = Number;
+        int Result = 0;
+        while (Duplicate != 0)
+        {
+            int remainder = Duplicate % 10;
+            Result += remainder;
+            Duplicate /= 10;
+        }
+        Console.WriteLine("Sum of Three digits is "+Result) ;
+    }
+}
