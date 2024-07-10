@@ -1,0 +1,27 @@
+1. Write the Pseudocode to Calculate the sum of digits of the number given by user
+Eg: 456=4+5+6=15
+
+
+Algorithm
+
+1. Declare a variable called num
+2. And get the value for variable num
+3. Declare another variable called result and set value to 0
+4. While loop until num is less than or equal to 0
+	Declare variable to store Remaninder called rem
+	seperate the last digit from the number using %10 (modulus) operator.
+	Add remainder to result variable.
+	Then Remove the last digit from the number using /10
+5. Display the result.
+
+Pseudocode
+
+1.Start
+2.Declare int num = 456
+3.Declare result = 0
+4.while(num is greater than 0)
+	Declare int rem = num%10
+	Add result = result+rem
+	remove last digit num = num/10
+5.print result
+6.Stop

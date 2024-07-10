@@ -1,0 +1,22 @@
+1. Open www.leetcode.com
+
+2. login with the credentials (Asking for user email and password)
+
+3. Menu -> Problems
+	choose problems from the menu.
+
+4. Redirecting to another page for choosing the problem
+
+5. Dificulty -> Easy, Medium, Hard
+	Select Easy from Dificulty Filter menu.
+
+6. Problems with easy level are shown below, Click on a problem to solve.
+
+7. It Redirect to the page for writing the code.
+
+8. write the code in text editor area.
+
+9. click submit to check the result
+
+
+

@@ -1,0 +1,26 @@
+3. Write the Pseudocode to calculate the average of 5 marks accepted from user. If the average is between 75-90 print excellent, 
+60-75 print good and 45-60 pass below 45 fail
+
+
+Algorithm
+
+
+1.Declare variables Mark1,Mark2,Mark3,Mark4,Mark5 and the values of earch marks
+2.Declare Average to store the average of 5 marks.
+3.Add all the marks and divide it by 5 to get the average
+4.if average is 65 to 75 print good
+5.or average is 45 to 65 print pass
+6 or average is below 45 print fail
+
+
+Pseudocode
+
+1.Declare int Mark1,Mark2,Mark3,Mark4,Mark5
+2.Declare int Average
+3.Average = (Mark1+Mark2+Mark3+Mark4+Mark5)/5
+4.if Average> 65 and Average<75
+	print "Good"
+5.Else if Average>45 and Average<65
+	print "Pass"
+6.Else if Average<45
+	print "Fail"

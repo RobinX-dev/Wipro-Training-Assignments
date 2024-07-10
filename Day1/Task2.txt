@@ -1,0 +1,37 @@
+2. Write the Pseudocode to calcualte the area of a rectangle, square and circle
+
+
+Algorithm
+
+1.Declare the variable called Shape and the shape from user
+2.Check if shape is Rectangle
+	Declare length and width and get the value from the user
+	declare Area and store the area of the rectangle
+	Print Area
+3.Check if shape is "Square"
+	Declare variable called Side and get it from the user
+	Declare variablle called Area and stored the area of the square
+	print Area
+4.Check if shape is "Circle"
+	Declare variable called radius and get value from user
+	Declare variablle called Area and stored the area of the Circle
+	print Area
+
+
+Pseudocode
+
+1.start
+2.Declare string shape;
+3.if shape == "Rectangle"
+	Declare int length, Width;
+	Declare int Area = length*Width
+	Print Area
+4.if shape == "Square"
+	Declare int Side
+	Declare int Area = Side*Side
+	Print Area
+5.if shape == "Circle"
+	Declare int radius
+	Declare int Area = 3.14*radius*radius
+	Print Area
+6.Stop
