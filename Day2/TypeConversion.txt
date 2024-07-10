@@ -1,0 +1,11 @@
+public class task1 {
+    public static void Main(string[] args) {
+        int number1 = int.MaxValue;
+        int number2 = int.MaxValue;
+        long result = (long)number1 + (long)number2;
+        Console.WriteLine(number1 + " + " + number2 + " " + result);
+
+        // Console.WriteLine(long.MaxValue);
+        //Console.WriteLine(short.MaxValue);
+    }
+}
