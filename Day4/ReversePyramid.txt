@@ -1,0 +1,17 @@
+public class ReversePyramid {
+    public static void Main(String[] args) {
+        int n = 5;
+        string Spaces = " ", Character = "*";
+        int spaceCount = n - 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = spaceCount; j > 0; j--) {
+                Console.Write(Spaces);
+            }
+            spaceCount--;
+            for(int k=0; k < i; k++) {
+                Console.Write(Character);
+            }
+            Console.WriteLine();
+        }
+    }
+}
