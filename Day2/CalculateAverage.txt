@@ -1,0 +1,31 @@
+public class CalculateAverage
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the Marks of 5 subject");
+        int Mark1 = Convert.ToInt32(Console.ReadLine());
+        int Mark2 = Convert.ToInt32(Console.ReadLine());
+        int Mark3 = Convert.ToInt32(Console.ReadLine());
+        int Mark4 = Convert.ToInt32(Console.ReadLine());
+        int Mark5 = Convert.ToInt32(Console.ReadLine());
+
+        int Average = (Mark1+Mark2+Mark3+Mark4+Mark5)/5;
+
+        if(Average >75 && Average <= 90)
+        {
+            Console.WriteLine("Excelent");
+        }
+        else if(Average > 60 && Average <= 75)
+        {
+            Console.WriteLine("Good");
+        }
+        else if (Average >= 45 && Average <= 60)
+        {
+            Console.WriteLine("Pass");
+        }
+        else if (Average < 45)
+        {
+            Console.WriteLine("Fail");
+        }
+    }
+}
