@@ -1,0 +1,32 @@
+public class GreatestCommonDivisor
+{
+    static void GCD(int a, int b)
+    {
+        string outputStr = "";
+        string output = "";
+        for (int i = 1; i < a; i++)
+        {
+            if (a % i == 0)
+            {
+                outputStr = outputStr + Convert.ToString(i)+ " ";
+            }
+        }
+        for(int i = 1; i < b; i++)
+        {
+            if(b % i == 0)
+            {
+                if (outputStr.Contains(Convert.ToString(i)))
+                {
+                    output = Convert.ToString(i);
+                }
+            }
+        }
+        Console.WriteLine(Convert.ToInt32(output));
+    }
+    public static void Main(string[] args)
+    {
+        int a = 24, b = 18;
+        GCD(a, b);
+
+    }
+}

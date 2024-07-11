@@ -1,0 +1,39 @@
+public class WordsInNEwLine
+{
+    static void SeperateWord(string sentence)
+    {
+        int startPosition = 0;
+        int strLength = 0;
+        for (int i=0; i<sentence.Length; i++)
+        {
+            if (sentence[i] == ' ')
+            {
+                Console.WriteLine(sentence.Substring(startPosition, strLength));
+                startPosition = i+1;
+                strLength = 0;
+            }
+        }
+        
+    }
+    public static void Main(string[] args)
+    {
+        string sentence = "Welcome to C# programming";
+        int start = 0;
+        int strLength = 0;
+        for (int i=0;i<sentence.Length-1; i++)
+        {
+          
+            if (sentence[i]==' ')
+            {
+                Console.WriteLine(sentence.Substring(start,strLength));
+                start = i+1;
+                strLength = 0;
+            }
+            else
+            {
+                strLength++;
+            }
+        }
+        //SeperateWord(sentence);
+    }
+}

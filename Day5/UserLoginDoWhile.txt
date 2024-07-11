@@ -1,0 +1,41 @@
+public class UserLogin
+{
+    static bool IsCorrectUser(string userId, string password)
+    {
+        if ("admin" == userId.Trim() && "admin123" == password.Trim())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public static void Main(String[] args)
+    {
+        int count = 1;
+
+        do
+        {
+            Console.Write("Enter the user name :");
+            string id = Console.ReadLine();
+            Console.Write("Enter the password :");
+            string pass = Console.ReadLine();
+
+            if (IsCorrectUser(id, pass))
+            {
+                Console.WriteLine("Login succesfull");
+            }
+            else
+            {
+                Console.WriteLine("Wrong Credentials !!!");
+                Console.WriteLine();
+                count++;
+            }
+        } while (count <= 3);
+        if (count > 3)
+        {
+            Console.WriteLine("Too many attempts.... try after sometimes");
+        }
+    }
+}
