@@ -1,0 +1,25 @@
+public class ReverseArray {
+    static void ArrayReverse(int[] arr) {
+        int[] outputArray = new int[arr.Length];
+        int outputArrayPosition = 0;
+        for(int i = arr.Length - 1; i >= 0; i--) {
+            outputArray[outputArrayPosition] = arr[i];
+            outputArrayPosition++;
+        }
+        foreach(int num in outputArray) {
+            Console.Write(num+" ");
+        }
+    }
+
+    public static void Main(string[] args) {
+        int[] arr = new int[5];
+        int i = 0;
+        while (i < 5) {
+            Console.Write("Enter number {0} :", i+1);
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+            i++;
+        }
+        
+        ArrayReverse(arr);
+    }
+}

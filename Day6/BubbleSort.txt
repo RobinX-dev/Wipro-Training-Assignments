@@ -1,0 +1,23 @@
+public class BubbleSort {
+    public static void Main(string[] args) {
+        int[] arr = new int[5];
+        int i = 0;
+        while (i < 5) {
+            Console.Write("Enter the number {0} : ", i + 1);
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+            i++;
+        }
+        for (i = 0; i < arr.Length-1; i++) { 
+            for(int j=i+1;j<arr.Length;j++) {
+                if (arr[i]>arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        foreach (int j in arr) {
+            Console.Write(j+" ");
+        }
+    }
+}
