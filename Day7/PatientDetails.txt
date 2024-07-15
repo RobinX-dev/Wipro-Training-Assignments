@@ -1,0 +1,61 @@
+public class PatientDetails {
+    public string PatientName;
+    public int PatientAge;
+    public long PatientPhoneNumber;
+    public double PatientWeight;
+    public string BloodGroup;
+    public char Gender;
+    public bool IsPatient;
+    public DateTime EntryTime;
+
+    public void GetPatientDetails() {
+        Console.Write("Enter the patient name : ");
+        PatientName = Console.ReadLine();
+
+        Console.Write("Enter Patient Age : ");
+        PatientAge = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter Patient Phone Number : ");
+        PatientPhoneNumber = Convert.ToInt64(Console.ReadLine());
+
+        Console.Write("Enter Patient Gender (M or F) : ");
+        Gender = Convert.ToChar(Console.ReadLine());
+
+        Console.Write("Enter Patient BloodGroup : ");
+        BloodGroup = Console.ReadLine();
+
+        Console.Write("Enter Patient Weight : ");
+        PatientWeight = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Is correct patient : ");
+        IsPatient = Convert.ToBoolean(Console.ReadLine());
+
+        EntryTime = DateTime.Now;
+        Console.WriteLine("Enter Entry time : {0} ", EntryTime.ToString("dd-MM-yyyy  hh:mm"));
+        Console.WriteLine();
+    }
+
+    public void DisplayPatientDetails() {
+        Console.WriteLine("Patient name : {0}", PatientName);
+        Console.WriteLine("Patient Age : {0}", PatientAge);
+        Console.WriteLine("Patient Gender : {0}", Gender);
+        Console.WriteLine("Patient Phone number : {0}", PatientPhoneNumber);
+        Console.WriteLine("Patient Blood Group : {0}", BloodGroup);
+        Console.WriteLine("Patient Weight : {0}", PatientWeight);
+        Console.WriteLine("Patient is Correct : {0}", IsPatient);
+        Console.WriteLine("Patient Entry time : {0}", EntryTime.ToString("dd-MM-yyyy  hh:mm"));
+        Console.WriteLine();
+    }
+}
+
+public class Patient {
+    public static void Main() {
+        PatientDetails patient1 = new PatientDetails();
+        patient1.GetPatientDetails();
+        patient1.DisplayPatientDetails();
+
+        PatientDetails patient2 = new PatientDetails();
+        patient2.GetPatientDetails();
+        patient2.DisplayPatientDetails();
+    }
+}
