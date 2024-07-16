@@ -1,0 +1,24 @@
+public class Program {
+    public static int FindWordsWithEqualLength(string str) {
+        string[] strArr = str.ToString().Split(' ');
+        int count = 0;
+        for(int i = 0; i < strArr.Length-1; i++) {
+            int found = 1;
+            for(int j=i+1;j< strArr.Length; j++) {
+                if (strArr[i].Length == strArr[j].Length) {
+                    found++;
+                }
+            }
+            if (found > count && found > 1) {
+                count = found;
+            }
+        }
+
+        return count;
+    }
+    public static void Main(string[] args) {
+        Console.WriteLine("Enter the Sentence :");
+        string? str = Console.ReadLine();
+        Console.WriteLine(FindWordsWithEqualLength(str) + " Words with same number of characters..");
+    }
+}

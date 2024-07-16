@@ -1,0 +1,17 @@
+public class Program {
+    public static int WordCount(string str) {
+        str = str.Trim();
+        int wordCount = 1;
+        for (int i = 1; i < str.Length-1; i++) {
+            if (str[i] == ' ' && str[i - 1] != ' ' && str[i + 1] != ' ') {
+                wordCount++;
+            }
+        }
+        return wordCount;
+    }
+    public static void Main(string[] args) {
+        Console.WriteLine("Enter a sentence :");
+        string str = Console.ReadLine();
+        Console.WriteLine(WordCount(str));
+    }
+}

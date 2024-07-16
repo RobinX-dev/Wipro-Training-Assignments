@@ -1,0 +1,27 @@
+namespace StringOperations {
+    public class Program {
+        static void Reverse(string str) {
+            int start = 0;
+            int count = 0;
+            string result = "";
+            for(int i = str.Length - 1; i >= 0; i--) {
+                if (i > 0 && str[i] == ' ') {
+                    start = i + 1;
+                    result = result +" "+ str.Substring(start, count);
+                    count = 0;
+                }
+                else {
+                    count++;
+                }
+            }
+            Console.WriteLine(result);
+        }
+
+        public static void Main(string[] args) {
+            Console.WriteLine("Enter the words");
+            string? str = "Hi hello how are you";
+            Reverse(str);
+
+        }
+    }
+}
