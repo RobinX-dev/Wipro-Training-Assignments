@@ -1,0 +1,34 @@
+public class Program {
+    public static bool ValidIPAddress(string IpAddress) {
+        int start = 0;
+        int partCount = 1;
+        int length = 0;
+        for (int i = 0; i < IpAddress.Length; i++) {
+            if (IpAddress[i] == '.') {
+                string num = IpAddress.Substring(start, length);
+                if (num.Length <= 3 && Convert.ToInt32(num) < 256) {
+                    partCount++;
+                    start = i + 1;
+                    length = 0;
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                length++;
+            }
+        }
+
+        if(partCount == 4) {
+            return true;
+        }
+
+        return false;
+    }
+    public static void Main(string[] args) {
+        Console.WriteLine("Enter hte ip address");
+        string IpAddress = Console.ReadLine();
+        Console.WriteLine(ValidIPAddress(IpAddress));
+    }
+}
